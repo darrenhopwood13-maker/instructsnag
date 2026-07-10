@@ -44,9 +44,9 @@ export default function NewSnag() {
       const { data: { session } } = await supabase.auth.getSession()
       if (!session) throw new Error('Not authenticated')
 
-      // Call the edge function
+      // Call the Vercel serverless function
       const res = await fetch(
-        `${import.meta.env.VITE_SUPABASE_URL || 'https://nvgdjqqxjsethdsawspl.supabase.co'}/functions/v1/instruct-snag`,
+        '/api/instruct-snag',
         {
           method: 'POST',
           headers: {

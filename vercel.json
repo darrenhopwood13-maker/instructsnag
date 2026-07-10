@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/instruct-snag.ts": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
