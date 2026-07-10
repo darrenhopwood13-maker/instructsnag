@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-ink: #1a1a1a;
+  --color-paper: #f8f7f4;
+  --color-orange: #e8751a;
+  --color-orange-light: #fdf4e8;
+  --color-orange-dark: #c45f0e;
+  --color-green: #2d8a4e;
+  --color-red: #c13a3a;
+  --color-amber: #b8860b;
+  --color-blue: #2563eb;
+  --color-gray-100: #f0efec;
+  --color-gray-200: #e2e1dd;
+  --color-gray-300: #c4c3be;
+  --color-gray-400: #8e8d89;
+  --color-gray-500: #6b6a66;
+  --color-gray-600: #4a4946;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glass card utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.glass-orange {
+  background: linear-gradient(135deg, rgba(232, 117, 26, 0.1), rgba(232, 117, 26, 0.05));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 117, 26, 0.2);
+}
+
+/* Button styles */
+.btn-primary {
+  background: var(--color-orange);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: var(--color-orange-dark);
+  transform: translateY(-1px);
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-ink);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: 1px solid var(--color-gray-300);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-outline:hover {
+  border-color: var(--color-orange);
+  color: var(--color-orange);
+}
+
+/* Severity badges */
+.severity-cosmetic { background: #e2e1dd; color: #4a4946; }
+.severity-functional { background: #fef3c7; color: #92400e; }
+.severity-structural { background: #fee2e2; color: #991b1b; }
+.severity-lifesafety { background: #dc2626; color: white; font-weight: 600; }
+
+/* Status badges */
+.status-open { background: #dbeafe; color: #1e40af; }
+.status-in-progress { background: #fef3c7; color: #92400e; }
+.status-closed { background: #d1fae5; color: #065f46; }
+.status-disputed { background: #fee2e2; color: #991b1b; }
